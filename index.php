@@ -50,7 +50,7 @@ if ($action == 'list_items') {
         add_category($name);
         header('Location: .?action=list_categories');  // display the Category List page
     }
-} else if ($action == 'delete_category') {
+}  else if ($action == 'delete_category') {
     $category_id = filter_input(INPUT_POST, 'category_id', 
             FILTER_VALIDATE_INT);
     delete_category($category_id);

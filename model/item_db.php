@@ -27,17 +27,18 @@ function get_items_by_category($category_id) {
 }
    
 
-function get_item($item_num) {
-    global $db;
-    $query = 'SELECT * FROM todoitems
-              WHERE ItemNum = :item_num';
-    $statement = $db->prepare($query);
-    $statement->bindValue(':item_num', $item_num);
-    $statement->execute();
-    $item = $statement->fetch();
-    $statement->closeCursor();
-    $category_name = $item['categoryID'];
-    return $item;
+function get_item($category_id) {
+        global $db;
+        $query = 'SELECT t.Title, c.categoryName
+                  FROM todoitems t  
+                  LEFT OUTER JOIN categories c 
+                  ON t.categoryID = c.categoryID';
+                  
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $item = $statement->fetch();
+        $statement->closeCursor();
+        return $item;
 
 }
 

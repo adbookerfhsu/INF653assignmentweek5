@@ -3,6 +3,7 @@
 
  <!-- display a list of categories -->
  <aside>
+    
         <!-- display a list of categories -->
         <h2>Categories</h2>
         <nav>
