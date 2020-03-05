@@ -1,6 +1,7 @@
 <?php
-    $dsn = "mysql:host=localhost; dbname=todolist";
-    $username = "root";
+    $dsn = "mysql:host=z12itfj4c1vgopf8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com; dbname=wjbw108az3b5v8zw";
+    $username = "puhz7p8dtkj0uc2h";
+    $password = "oo2fchf3mknqppza";
     
 
 try{
